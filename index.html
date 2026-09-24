@@ -32,6 +32,7 @@
             cursor: pointer;
             margin: 0 5px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: 0.3s;
         }
         .lang-btn:hover {
             background-color: #ffeb3b;
@@ -45,93 +46,89 @@
             background-color: #4a1500;
             color: #ffeb3b;
             padding: 12px;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
         }
         .container {
             padding: 20px;
-            max-width: 700px;
+            max-width: 800px;
             margin: auto;
             background: #fff;
             box-shadow: 0 0 15px rgba(0,0,0,0.1);
             text-align: left;
         }
-        .main-lalitha.jpg-img {
+        .main-swamiji-img {
             width: 100%;
-            max-height: 450px;
+            max-height: 480px;
             object-fit: contain;
-            border-radius: 10px;
+            border-radius: 12px;
             border: 4px solid #ff8c00;
             margin: 15px 0;
             background-color: #000;
             display: block;
             margin-left: auto;
             margin-right: auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
-        .section-box {
-            background-color: #fff8e1;
-            border-left: 5px solid #ff8c00;
+        .intro-text {
+            text-align: center;
+            font-weight: bold;
+            color: #d35400;
+            margin: 20px 0;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            background: #fff8e1;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ffe0b2;
+        }
+        .cards-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        @media (max-width: 700px) {
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .card {
+            background-color: #fffbf0;
+            border: 1px solid #ffe0b2;
+            border-top: 5px solid #ff8c00;
             padding: 15px;
-            margin: 15px 0;
-            border-radius: 4px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-        .section-box h3 {
+        .card h3 {
             margin-top: 0;
             color: #d35400;
             font-size: 1.1rem;
-        }
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-        @media (max-width: 600px) {
-            .grid-2 {
-                grid-template-columns: 1fr;
-            }
+            border-bottom: 2px solid #ffe0b2;
+            padding-bottom: 8px;
         }
         ul {
             padding-left: 20px;
             margin: 5px 0;
         }
         li {
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             font-size: 0.95rem;
+            line-height: 1.4;
         }
         .price-tag {
-            background-color: #d35400;
+            background: linear-gradient(135deg, #d35400, #e67e22);
             color: white;
-            padding: 10px;
+            padding: 12px;
             text-align: center;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: bold;
-            border-radius: 5px;
-            margin: 15px 0;
-        }
-        .contact-box {
-            text-align: center;
-            background-color: #e8f5e9;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 20px;
-            border: 2px dashed #2e7d32;
-        }
-        .contact-btn {
-            display: inline-block;
-            margin: 5px;
-            background-color: #28a745;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-size: 1rem;
-            border-radius: 25px;
-            font-weight: bold;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .contact-btn:hover {
-            background-color: #218838;
+            border-radius: 8px;
+            margin: 25px 0 15px 0;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
         }
         .address-box {
             text-align: center;
@@ -139,8 +136,34 @@
             margin: 15px 0;
             color: #4a1500;
             background: #fff3e0;
-            padding: 10px;
-            border-radius: 5px;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px dashed #ff8c00;
+        }
+        .contact-box {
+            text-align: center;
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border: 2px dashed #2e7d32;
+        }
+        .contact-btn {
+            display: inline-block;
+            margin: 8px;
+            background-color: #28a745;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .contact-btn:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
         }
         .lang-content {
             display: none;
@@ -167,17 +190,17 @@
         <!-- கன்னட தலைப்பு -->
         <div id="header-kn" class="lang-content">
             <p style="margin:0; font-size: 0.95rem; font-weight: bold;">ಶ್ರೀ ಪುದುರಾಶಾತಿ ತುಣೆ</p>
-            <h1>ಶ್ರೀ ಪೊನ್ನಿಯಮ್ಮನ್ ಅರುಳ್ವಾಕು ಸಿದ್ಧಪೀಠ, ಸತ್ಯಮಂಗಲ</h1>
+            <h1>ಶ್ರೀ ಪೊನ್ನியಮ್ಮನ್ ಅರುಳ್ವಾಕು ಸಿದ್ಧಪೀಠ, ಸತ್ಯಮಂಗಲ</h1>
         </div>
     </header>
 
     <!-- தமிழ் பேனர் -->
     <div id="banner-ta" class="banner-tag lang-content active">
-        ஸ்ரீலஸ்ரீ தீனதயாளர் சித்தர் ஆசியுடன் • வெற்றிலை பிரசன்னம் • அம்மன் அருள்
+        குருநாதர் ஸ்ரீலஸ்ரீ தீனதயாளர் சித்தர் ஆசியுடன் • வெற்றிலை பிரசன்னம் • அம்மன் அருள்
     </div>
     <!-- கன்னட பேனர் -->
     <div id="banner-kn" class="banner-tag lang-content">
-        ಶ್ರೀಲಶ್ರೀ ದೀನದಯಾಳ ಸಿದ್ಧರ ಆಶೀರ್ವಾದದೊಂದಿಗೆ • ವೀಳೆಯದೆಲೆ ಪ್ರಸನ್ನ • ಅಮ್ಮನ ಕೃಪೆ
+        ಗುರುನಾಥ ಶ್ರೀಲಶ್ರೀ ದೀನದಯಾಳ ಸಿದ್ಧರ ಆಶೀರ್ವಾದದೊಂದಿಗೆ • ವೀಳೆಯದೆಲೆ ಪ್ರಸನ್ನ • ಅಮ್ಮನ ಕೃಪೆ
     </div>
 
     <div class="container">
@@ -188,71 +211,99 @@
 
         <!-- தமிழ் உள்ளடக்கம் -->
         <div id="details-ta" class="lang-content active">
-            <div style="text-align:center; font-weight:bold; color:#d35400; margin-bottom:15px;">
-                ஸ்ரீலஸ்ரீ லலிதா பரமேஸ்வரி சுவாமி அவர்களின் பரிபூரண வாக்குவன்மையால் உங்கள் சகல பிரச்சனைகளுக்கும் தீர்வு
+            <div class="intro-text">
+                ஸ்ரீலஸ்ரீ லலிதா பரமேஸ்வரி சுவாமி அவர்களின் பரிபூரண வாக்குவன்மையால் உங்கள் சகல பிரச்சனைகளுக்கும் தீர்வு தரப்படும்[cite: 7].
             </div>
 
-            <div class="grid-2">
-                <div class="section-box">
-                    <h3>🔮 அருள்வாக்கு மற்றும் பரிகாரங்கள்:</h3>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>🔮 அருள்வாக்கு & வசிய பரிகாரங்கள்</h3>
                     <ul>
-                        <li>வசியபாணை, வசியமை, வசியதாயத்து</li>
-                        <li>வசியமருந்து, வசியவிபூதி</li>
-                        <li>பேயை ஓட்டுதல், கண் திருஷ்டி கழித்தல்</li>
-                        <li>இடுமருந்து எடுத்தல், தொழில்வசியம்</li>
-                        <li>ஜனவசியம், பண வசியம் செய்துதரப்படும்</li>
-                        <li>இடப்பிரச்சனை, கணவன் மனைவி பிரச்சனை</li>
-                        <li>கோர்ட், கேஸ் வெற்றி கிடைக்க வழி</li>
+                        <li>வசியபாணை, வசியமை, வசியதாயத்து[cite: 7]</li>
+                        <li>வசியமருந்து, வசியவிபூதி[cite: 7]</li>
+                        <li>பேயை ஓட்டுதல், கண் திருஷ்டி கழித்தல்[cite: 7]</li>
+                        <li>இடுமருந்து எடுத்தல், தொழில்வசியம்[cite: 7]</li>
+                        <li>ஜனவசியம், பண வசியம் செய்துதரப்படும்[cite: 7]</li>
                     </ul>
                 </div>
-                <div class="section-box">
-                    <h3>🌿 சிறப்பு மருந்து மற்றும் தீர்வுகள்:</h3>
+
+                <div class="card">
+                    <h3>⚖️ சிறப்புத் தீர்வுகள் & பரிகாரங்கள்</h3>
                     <ul>
-                        <li><strong>செய்வினை, ஏவல், மோகினி, சூனியம்:</strong> அனைத்து கோளாறுகளும் தீர்க்கப்படும்.</li>
-                        <li><strong>நவக்கிரக எண்ணெய்:</strong> கைக்கால்வலி, மூட்டுவலி, வாதம் போன்றவற்றிக்கு மூலிகை எண்ணெய் தரப்படும்.</li>
-                        <li><strong>ஹயக்ரீவதேன்:</strong> உப்பு, தேன், நீர், மந்திரித்து தரப்படும்.</li>
-                        <li>வேப்பிலை மந்திரித்தல், குடியை நிறுத்த மருந்து</li>
-                        <li>வியாபார விருத்திக்கு எலுமிச்சை மந்திரித்தல்</li>
+                        <li>இடப்பிரச்சனை, கணவன் மனைவி பிரச்சனை[cite: 7]</li>
+                        <li>கோர்ட், கேஸ் வெற்றி கிடைக்க வழி[cite: 7]</li>
+                        <li><strong>செய்வினை, ஏவல், மோகினி, சூனியம்:</strong> அனைத்து கோளாறுகளும் தீர்க்கப்படும்[cite: 7].</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>🌿 மூலிகை & பிரத்யேக மருந்துகள்</h3>
+                    <ul>
+                        <li><strong>நவக்கிரக எண்ணெய்:</strong> கைக்கால்வலி, மூட்டுவலி, வாதம் போன்றவற்றிக்கு மூலிகை எண்ணெய் தரப்படும்[cite: 7].</li>
+                        <li><strong>ஹயக்ரீவதேன்:</strong> உப்பு, தேன், நீர், மந்திரித்து தரப்படும்[cite: 7].</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>⚡ சிறப்பு மந்திரப் பரிகாரங்கள்</h3>
+                    <ul>
+                        <li>வேப்பிலை மந்திரித்தல்[cite: 7]</li>
+                        <li>குடியை நிறுத்த மருந்து[cite: 7]</li>
+                        <li>வியாபார விருத்திக்கு எலுமிச்சை மந்திரித்தல்[cite: 7]</li>
                     </ul>
                 </div>
             </div>
 
             <div class="price-tag">
-                பிரசன்னம் பார்க்க ரூ. 500/- மட்டும்
+                பிரசன்னம் பார்க்க ரூ. 500/- மட்டும்[cite: 7]
             </div>
 
             <div class="address-box">
                 S. லலிதா பரமேஸ்வரி<br>
-                6/4E, மில்ரோடு, வரதம்பாளையம், சத்யமங்கலம்
+                6/4E, மில்ரோடு, வரதம்பாளையம், சத்யமங்கலம்[cite: 7]
             </div>
         </div>
 
         <!-- கன்னட உள்ளடக்கம் -->
         <div id="details-kn" class="lang-content">
-            <div style="text-align:center; font-weight:bold; color:#d35400; margin-bottom:15px;">
-                ಶ್ರೀಲಶ್ರೀ ಲಲಿತಾಪರಮೇಶ್ವರಿ ಸ್ವಾಮಿಗಳ ಪರಿಪೂರ್ಣ ದೈವಿಕ ನುಡಿಯಿಂದ ನಿಮ್ಮ ಎಲ್ಲಾ ಸಮಸ್ಯೆಗಳಿಗೆ ಪರಿಹಾರ
+            <div class="intro-text">
+                ಶ್ರೀಲಶ್ರೀ ಲಲಿತಾಪರಮೇಶ್ವರಿ ಸ್ವಾಮಿಗಳ ಪರಿಪೂರ್ಣ ದೈವಿಕ ನುಡಿಯಿಂದ ನಿಮ್ಮ ಎಲ್ಲಾ ಸಮಸ್ಯೆಗಳಿಗೆ ಪರಿಹಾರ ನೀಡಲಾಗುತ್ತದೆ.
             </div>
 
-            <div class="grid-2">
-                <div class="section-box">
-                    <h3>🔮 ದೈವಿಕ ನುಡಿ ಮತ್ತು ಪರಿಹಾರಗಳು:</h3>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>🔮 ದೈವಿಕ ನುಡಿ & ವಶ್ಯ ಪರಿಹಾರಗಳು</h3>
                     <ul>
                         <li>ವಶ್ಯಬಾಣೆ, ವಶ್ಯಮೈ, ವಶ್ಯತಾಯತ</li>
                         <li>ವಶ್ಯಮದ್ದು, ವಶ್ಯವಿಭೂತಿ</li>
                         <li>ಭೂತೋಚ್ಚಾಟನೆ, ದೃಷ್ಟಿ ದೋಷ ನಿವಾರಣೆ</li>
-                        <li>ಇಡುಮದ್ದು ತೆರ우ಗೊಳಿಸುವುದು, ವ್ಯಾಪಾರ ವಶ್ಯ</li>
+                        <li>ಇಡುಮದ್ದು ತೆರವುಗೊಳಿಸುವುದು, ವ್ಯಾಪಾರ ವಶ್ಯ</li>
                         <li>ಜನವಶ್ಯ, ಧನ ವಶ್ಯ ಮಾಡಿಕೊಡಲಾಗುತ್ತದೆ</li>
-                        <li>ಜಾಗದ ಸಮಸ್ಯೆ, ಗಂಡ-ಹೆಂಡತಿ ಕಲಹ ನಿವಾರಣೆ</li>
-                        <li>ಕೋರ್ಟ್ ಕೇಸ್‌ಗಳಲ್ಲಿ ಜಯ ಸಿಗಲು ಮಾರ್ಗದರ್ಶನ</li>
                     </ul>
                 </div>
-                <div class="section-box">
-                    <h3>🌿 ವಿಶೇಷ ಔಷಧಿ ಮತ್ತು ಪರಿಹಾರಗಳು:</h3>
+
+                <div class="card">
+                    <h3>⚖️ ವಿಶೇಷ ಪರಿಹಾರಗಳು & ಮಾರ್ಗದರ್ಶನ</h3>
                     <ul>
+                        <li>ಜಾಗದ ಸಮಸ್ಯೆ, ಗಂಡ-ಹೆಂಡತಿ ಕಲಹ ನಿವಾರಣೆ</li>
+                        <li>ಕೋರ್ಟ್ ಕೇಸ್‌ಗಳಲ್ಲಿ ಜಯ ಸಿಗಲು ಮಾರ್ಗದರ್ಶನ</li>
                         <li><strong>ಚೇಳ್ವಿನೆ, ಏವಲ್, ಮೋಹಿನಿ, ಶೂನ್ಯ:</strong> ಎಲ್ಲಾ ದೋಷಗಳು ನಿವಾರಿಸಲ್ಪಡುತ್ತವೆ.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>🌿 ಮೂಲಿ olಬೆ ಮತ್ತು ವಿಶೇಷ ಔಷಧಗಳು</h3>
+                    <ul>
                         <li><strong>ನವಗ್ರಹ ಎಣ್ಣೆ:</strong> ಕೈಕಾಲು ನೋವು, ಕೀಲು ನೋವು, ವಾತ ರೋಗಗಳಿಗೆ ಮೂಲಿ olಬೆ ಎಣ್ಣೆ ನೀಡಲಾಗುತ್ತದೆ.</li>
                         <li><strong>ಹಯಗ್ರೀವ ಜೇನು:</strong> ಉಪ್ಪು, ಜೇನುತುಪ್ಪ, ನೀರು ಮಂತ್ರಿಸಿ ನೀಡಲಾಗುತ್ತದೆ.</li>
-                        <li>ಬೇವಿನೆಲೆ ಮಂತ್ರಿಸುವುದು, ಮದ್ಯಪಾನ ನಿಲ್ಲಿಸುವ ಔಷಧಿ</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>⚡ ವಿಶೇಷ ಮಂತ್ರ ಪರಿಹಾರಗಳು</h3>
+                    <ul>
+                        <li>ಬೇವಿನೆಲೆ ಮಂತ್ರಿಸುವುದು</li>
+                        <li>ಮದ್ಯಪಾನ ನಿಲ್ಲಿಸುವ ಔಷಧಿ</li>
                         <li>ವ್ಯಾಪಾರ ಅಭಿವೃದ್ಧಿಗೆ ನಿಂಬೆಹಣ್ಣು ಮಂತ್ರಿಸುವುದು</li>
                     </ul>
                 </div>
@@ -270,9 +321,11 @@
 
         <!-- தொடர்பு எண்கள் மற்றும் முன்பதிவு விவரம் -->
         <div class="contact-box">
-            <p style="margin: 0 0 10px 0; font-weight: bold; color: #b71c1c;">⚠️ முன்பதிவு அவசியம் (मुன்பதிவு அவசியம் / ಮುಂಚಿತವಾಗಿ ಹೆಸರು ನೊಂದಾಯಿಸಿ)</p>
-            <a href="tel:+919965603633" class="contact-btn">📞 99656 03633</a>
-            <a href="tel:+919043796767" class="contact-btn">📞 90437 96767</a>
+            <p style="margin: 0 0 12px 0; font-weight: bold; color: #b71c1c; font-size: 1.05rem;">
+                ⚠️ முன்பதிவு அவசியம் (முன்பதிவு அவசியம் / ಮುಂಚಿತವಾಗಿ ಹೆಸರು ನೊಂದಾಯಿಸಿ)[cite: 7]
+            </p>
+            <a href="tel:+919965603633" class="contact-btn">📞 99656 03633[cite: 7]</a>
+            <a href="tel:+919043796767" class="contact-btn">📞 90437 96767[cite: 7]</a>
         </div>
     </div>
 
@@ -292,4 +345,4 @@
     </script>
 
 </body>
-  </html>
+                </html>
